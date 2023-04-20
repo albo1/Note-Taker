@@ -20,10 +20,15 @@ app.get('/api/notes', (req, res) => {
     console.log(`${req.method} request for notes`)
 });
 
+app.post('/api/notes', (req, res) => {
+    res.status(200).json(`${req.method} request to add note`)
+    console.log(`${req.method} request for notes`)
 
+})
 
 // app.get('notes??')
 // send file?
+// generate id download??
 
 
 app.listen(PORT, () => 
