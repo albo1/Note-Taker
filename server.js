@@ -48,18 +48,21 @@ app.post('/api/notes', (req, res) => {
                 );
             }
         });
-
-
+        const response = { 
+            status: 'success',
+            body: newNote,
+        };
     }
-
 })
+app.get('/notes', (req, res) =>
+    res.sendFile(path.join(__dirname, '/public/notes.html'))
+    );
 
-// app.get('notes??')
-// send file?
-// generate id download??
-
+app.get('*', (req, res) => 
+    res.sendFile(path.join(__dirname, '/public/index.html'))
+    );
 
 app.listen(PORT, () => 
-    console.log('http://localhost:${PORT}')
+    console.log(`APP LISTENING AT http://localhost:${PORT}`)
 );
 
