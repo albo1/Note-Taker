@@ -39,9 +39,17 @@ app.post('/api/notes', (req, res) => {
             if (err) {
                 console.log(err);
             } else {
-                const
+                const notesParsed = JSON.parse(data);
+                notesParsed.push(newNote);
+
+                fs.write('./db/db.json', JSON.stringify(notesParsed),
+                (writeError) => 
+                    writeError ? console.error(writeError) : connsole.info('Sucessfully Updated Notes!')
+                );
             }
-        })
+        });
+
+        
     }
 
 })
