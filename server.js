@@ -20,6 +20,8 @@ app.get('/api/notes', (req, res) => {
     console.log(`${req.method} request for notes`)
 });
 
+
+
 // app.get('notes??')
 // send file?
 
