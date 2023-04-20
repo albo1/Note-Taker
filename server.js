@@ -42,14 +42,14 @@ app.post('/api/notes', (req, res) => {
                 const notesParsed = JSON.parse(data);
                 notesParsed.push(newNote);
 
-                fs.write('./db/db.json', JSON.stringify(notesParsed),
+                fs.writeFile('./db/db.json', JSON.stringify(notesParsed),
                 (writeError) => 
                     writeError ? console.error(writeError) : connsole.info('Sucessfully Updated Notes!')
                 );
             }
         });
 
-        
+
     }
 
 })
