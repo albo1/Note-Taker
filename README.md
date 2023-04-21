@@ -9,7 +9,7 @@ Just click the link to the heroku website and you will be able to use the app fr
 ## Usage
 Keep track of your otes!
 
-HEROKU LINK:
+HEROKU LINK: ""
 
 SCREESHOT:
 ![notetaker](/public/assets/images/notetaker%20ss.png)
