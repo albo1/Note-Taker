@@ -20,7 +20,7 @@ app.get('/api/notes', (req, res) => {
         }
         res.status(200).json(JSON.parse (data));
     })
-    console.log(`${req.method} request for notes`)
+    console.info(`${req.method} request for notes`)
 });
 
 app.post('/api/notes', (req, res) => {
@@ -44,7 +44,7 @@ app.post('/api/notes', (req, res) => {
 
                 fs.writeFile('./db/db.json', JSON.stringify(notesParsed),
                 (writeError) => 
-                    writeError ? console.error(writeError) : connsole.info('Sucessfully Updated Notes!')
+                    writeError ? console.error(writeError) : console.info('Sucessfully Updated Notes!')
                 );
             }
         });
